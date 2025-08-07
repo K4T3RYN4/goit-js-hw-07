@@ -24,3 +24,18 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+
+const ulElement = document.querySelector('ul');
+
+
+function imgTemplate(item) {
+  return `<li><img src="${item.url}" alt="${item.alt}" width="360"></li>`;
+}
+
+function imgTemplates(array) {
+  return array.map(imgTemplate).join('\n')
+}
+
+const res = imgTemplates(images);
+
+ulElement.insertAdjacentHTML('afterbegin', res);
