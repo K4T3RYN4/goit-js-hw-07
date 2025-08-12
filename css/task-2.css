@@ -1,0 +1,14 @@
+li {
+    list-style: none;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 20px;
+}
+
+img {
+    border-radius: 20px;
+}
