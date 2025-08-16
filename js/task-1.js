@@ -1,14 +1,11 @@
 const categListEl = document.querySelector('#categories');
-const categListItemEl = categListEl.querySelectorAll('h2');
+const categListItemEl = categListEl.querySelectorAll('.item');
 
-function countItems(categListItemEl) {
-    return categListItemEl.length;
-};
-
-console.log(countItems(categListItemEl));
-
+console.log(categListItemEl.length);
 
 for (const item of categListItemEl) {
-    console.log(item);
-    console.log(item.nextElementSibling.children.length);
+    const categoryName = item.querySelector('h2').textContent;
+    const elementsCount = item.querySelectorAll('ul li').length;
+    console.log(categoryName);
+    console.log(elementsCount);
 }
